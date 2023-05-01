@@ -52,23 +52,6 @@ function main(args) {
             }
         }
     })
-
-    let time_req = ['time', 'hour'];
-    let place = "";
-    time_req.forEach(time => {
-        if(args.includes(time)) {
-            let timeArr = args.split(" ");
-            for(var idx = 0; idx < timeArr.length; idx++) {
-                if(timeArr[idx] == "in" || timeArr[idx] == "at") {
-                    for(var city_idx = idx+1; city_idx < timeArr.length; city_idx++) {
-                        place += (" " + timeArr[city_idx]);
-                    }
-                }
-            }
-            
-        }
-    })
-
 }
 
 function testSpeech() {
